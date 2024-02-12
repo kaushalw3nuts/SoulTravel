@@ -2,32 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+* { box-sizing: border-box; padding: 0; margin: 0; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+html { scroll-behavior: auto !important; }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+body { background: #FFFFFF; margin: 0; padding: 0; font-family: 'Poppins'; font-style: normal; font-size: 14px; color: #000000; line-height: normal; font-weight: 400; }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+textarea { resize: none; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+ul li { list-style: none; }
+
+body.open_nav { overflow: hidden; }
+
+.main_wrap { overflow: hidden; }
+
+
+
+body.open_nav .main_header .header_logo .black_logo { @apply hidden }
+body.open_nav .main_header .header_logo .white_logo { @apply block }
+.main_header .main_navigation.slide { @apply translate-x-0 }
+.main_header .main_navigation .navigation_bar ul li + li { @apply xl:ml-10 lg:mt-0 mt-[30px] lg:ml-5 }
+.main_header .main_navigation .navigation_bar ul li a { 
+  @apply font-poppins font-normal xl:text-[18px] lg:text-black block leading-normal capitalize relative text-white lg:text-[16px] text-[18px]
+  after:content-[''] after:absolute after:-bottom-[8px] after:left-[50%] after:-translate-x-[50%] xl:after:w-11 after:transition-all after:duration-[0.4s] after:ease-in-out after:scale-0 xl:after:border-b-[6px] after:border-solid after:border-orange after:rounded-[8px] hover:after:scale-100 lg:after:w-9 lg:after:border-b-4
 }
+.main_header .main_navigation .navigation_bar ul li.active a::after { @apply scale-100 }
+.main_header .main_navigation .btn_box a + a { @apply 2xl:ml-8 lg:mt-0 lg:ml-5 mt-[30px] }
+.menu-btn { @apply relative lg:hidden flex items-center z-[1111] ml-auto }
+.menu-btn .toggle-btn { @apply relative flex w-6 h-[18px] items-center justify-center }
+.menu-btn .toggle-btn span { @apply relative block w-6 h-[2px] bg-orange duration-[0.3s] delay-[0.1s] 
+  after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-9px] after:bg-orange after:w-6 after:h-[2px] after:duration-[0.3s] after:delay-[0.1s] 
+  before:content-[''] before:absolute before:left-0 before:right-0 before:top-[-9px] before:w-6 before:h-[2px] before:bg-orange before:duration-[0.3s] before:delay-[0.1s]
+}
+.menu-btn .toggle-btn.active span { @apply after:bottom-0 after:rotate-45 before:top-0 before:-rotate-45 bg-transparent }
+
+
+.banner_section .left_part .main_tab .react-tabs ul { @apply m-0 border-0 }
+.banner_section .left_part .main_tab .react-tabs ul li { @apply border-0 p-0 }
