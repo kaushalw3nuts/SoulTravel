@@ -35,6 +35,10 @@ module.exports = {
         hoverorange: "#F95A12",
         lightcolor: "#ABABAB",
         blacklight: "rgba(46, 46, 46, 0.5)",
+        lightopacitycolor: "rgba(171, 171, 171, 0.15)",
+      },
+      boxShadow: {
+        'tabShadow': '0px 24px 50px rgba(0, 0, 0, 0.1)',
       },
     },
   },
