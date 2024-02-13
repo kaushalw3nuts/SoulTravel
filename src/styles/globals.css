@@ -25,6 +25,8 @@ body.open_nav { overflow: hidden; }
 
 body.open_nav .main_header .header_logo .black_logo { @apply hidden }
 body.open_nav .main_header .header_logo .white_logo { @apply block }
+.header { @apply transition-all duration-[0.4s] ease-in-out }
+.header.fixed_wrap { @apply bg-white }
 .main_header .main_navigation.slide { @apply translate-x-0 }
 .main_header .main_navigation .navigation_bar ul li + li { @apply xl:ml-10 lg:mt-0 mt-[30px] lg:ml-5 }
 .main_header .main_navigation .navigation_bar ul li a { 
@@ -44,31 +46,21 @@ body.open_nav .main_header .header_logo .white_logo { @apply block }
 
 .banner_section .left_part .main_tab { filter: drop-shadow(0px 24px 50px rgba(0, 0, 0, 0.1)); }
 .banner_section .left_part .main_tab .react-tabs ul { @apply m-0 border-0 flex bg-transparent }
-.banner_section .left_part .main_tab .react-tabs ul li { @apply border-0 rounded-none p-6 bg-lightopacitycolor flex items-center font-poppins font-medium text-[18px] text-blacklight }
+.banner_section .left_part .main_tab .react-tabs ul li { @apply border-0 rounded-none 2xl:p-6 xl:bg-lightopacitycolor lg:bg-black md:bg-black bg-black flex items-center font-poppins font-medium 2xl:text-[18px] xl:text-blacklight xl:p-4 xl:text-[16px] md:text-[16px] text-[0] p-4 text-white }
 .banner_section .left_part .main_tab .react-tabs ul .react-tabs__tab--selected { @apply bg-white text-orange }
 .banner_section .left_part .main_tab .react-tabs .react-tabs__tab-panel { @apply bg-white rounded-tr-3xl  }
-.banner_section .left_part .main_tab .react-tabs .tab_box .destdate_box + .destdate_box { @apply relative pl-12 after:content-[''] after:absolute after:left-0 after:top-[50%] after:-translate-y-[50%] after:h-12 after:w-px after:bg-lightcolor }
+.banner_section .left_part .main_tab .react-tabs .tab_box .destdate_box + .destdate_box { @apply relative 2xl:pl-12 after:content-[''] after:absolute after:left-0 after:top-[50%] after:-translate-y-[50%] after:h-12 after:w-px after:bg-lightcolor xl:pl-6 lg:pl-8 md:pl-6 md:after:block after:hidden }
 @keyframes waves {
 	0% {transform: scale(0.2, 0.2); opacity: 0;}
 	50% {opacity: 0.5;}
 	100% {transform: scale(0.9, 0.9); opacity: 0;}
 }
-.banner_section .right_part .world_img .waves { position: absolute; width: 1492px; height: 1492px; border: 96px solid rgba(247, 122, 64, 0.5); border-radius: 100%; top: -15%; left: -37%; opacity: 0; animation: waves 3s ease-in-out infinite; }
+.banner_section .right_part .world_img .waves { @apply absolute 2xl:w-[1492px] 2xl:h-[1492px] xl:w-[1300px] xl:h-[1300px] border-[96px] border-solid border-borderorange rounded-full 2xl:-top-[15%] 2xl:-left-[37%] xl:-top-[18%] xl:-left-[38%] opacity-0 w-[1300px] h-[1300px] lg:-top-[6%] lg:-left-[24%] md:-top-[18%] md:-left-[41%] }
+.banner_section .right_part .world_img .waves { animation: waves 3s ease-in-out infinite; }
 .banner_section .right_part .world_img .wave-1 { animation-delay: 0s; }
 .banner_section .right_part .world_img .wave-2 { animation-delay: 1s; }
 .banner_section .right_part .world_img .wave-3 { animation-delay: 2s; }
 
- @-webkit-keyframes animate-svg-stroke-1 {
-  0% {
-    stroke-dashoffset: 1029.6566162109375px;
-    stroke-dasharray: 1029.6566162109375px;
-  }
-
-  100% {
-    stroke-dashoffset: 2059.313232421875px;
-    stroke-dasharray: 1029.6566162109375px;
-  }
-}
 
 @keyframes animate-svg-stroke-1 {
   0% {
@@ -82,4 +74,4 @@ body.open_nav .main_header .header_logo .white_logo { @apply block }
   }
 }
 
-.svg-elem-1 { -webkit-animation: animate-svg-stroke-1 1s ease-in-out 1.5s both; animation: animate-svg-stroke-1 1s ease-in-out 1.5s both; }
+.svg-elem-1 { animation: animate-svg-stroke-1 1s ease-in-out 1.5s both; }

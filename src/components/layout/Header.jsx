@@ -38,11 +38,19 @@ const Header = () => {
 		bodyElement.classList.toggle('open_nav');
 	}
 
+	const [onScroll, setScroll] = useState(false);
+	useEffect(() => {
+		const scrollHandler = () => {
+			setScroll(window.scrollY > 1);
+		}
+		window.addEventListener('scroll', scrollHandler);
+	}, []);
+
 	const Router = useRouter();
 
 	return (
 		<>
-			<header className="header fixed top-0 left-0 w-full z-[1111] transition-all duration-300 ease-in-out">
+			<header className={`header fixed top-0 left-0 w-full z-[1111] transition-all duration-300 ease-in-out ${onScroll ? 'fixed_wrap' : ''}`}>
 				<div className="container">
 					<div className="main_header flex items-center py-[33px] lg:py-[30px]">
 						<div className="header_logo max-w-[158px] z-[1111]">

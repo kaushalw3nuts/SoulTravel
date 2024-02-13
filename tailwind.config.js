@@ -28,7 +28,6 @@ module.exports = {
         bebasneue: ['Bebas Neue', 'sans-serif'],
       },
       colors: {
-        black: "#000000",
         white: "#FFFFFF",
         black: "#2E2E2E",
         orange: "#F77A40",
@@ -36,6 +35,8 @@ module.exports = {
         lightcolor: "#ABABAB",
         blacklight: "rgba(46, 46, 46, 0.5)",
         lightopacitycolor: "rgba(171, 171, 171, 0.15)",
+        lightopacity: "rgba(171, 171, 171, 0.4)",
+        borderorange: "rgba(247, 122, 64, 0.5)",
       },
       boxShadow: {
         'tabShadow': '0px 24px 50px rgba(0, 0, 0, 0.1)',
