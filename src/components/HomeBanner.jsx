@@ -28,11 +28,13 @@ const HomeBanner = () => {
 
 		gsap.fromTo(planeImage,
 			{ 
+				opacity: 0,
 				scale: 0.6,
 				x: '20%',
 				y: '-30%'
 			}, // From
 			{
+				opacity: 1,
 				scale: 1,
 				x: '0',
 			  	y: '0',
@@ -210,12 +212,19 @@ const HomeBanner = () => {
 									<div className="waves wave-3"></div>
 								</div>
 							</div>
-							<div className="plan_box absolute 2xl:top-[39%] 2xl:left-[4%] z-10 2xl:max-w-none xl:max-w-[220px] xl:top-[39%] xl:left-[8%] top-[40%] left-[6%]">
+							<div className="plan_box absolute 2xl:top-[39%] 2xl:left-[4%] z-30 2xl:max-w-none xl:max-w-[220px] xl:top-[39%] xl:left-[8%] top-[40%] left-[6%]">
 								<Image src={Bigplan} alt="plan" />
 							</div>
 							<div className="path_img absolute 2xl:top-[36%] 2xl:left-[4%] xl:top-[34%] xl:left-[8.5%] z-20 top-[38%] left-[4%]">
 								<svg width="718" height="294" className="2xl:w-[718px] h-[294px] xl:w-[580px] lg:w-[718px] md:w-[614px]" viewBox="0 0 718 294" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M651.206 1C689.057 10.7377 711.405 27.4273 715.798 49.2401C720.192 71.0529 706.463 97.1471 676.115 124.664C645.768 152.18 599.972 180.057 543.747 205.24C487.523 230.423 423.038 251.94 357.359 267.434C291.679 282.928 227.34 291.8 171.391 293.079C115.441 294.358 70.0404 287.994 40.163 274.685C10.2856 261.376 -2.9155 241.634 2.00606 217.624C6.92762 193.614 29.782 166.261 68.065 138.563" stroke="#2E2E2E" className="svg-elem-1" stroke-dasharray="10 10" />
+									<g clip-path="url(#clip0_345_2886)">
+										<path className="svg-elem-1" d="M651.206 1C689.057 10.7377 711.405 27.4273 715.798 49.2401C720.192 71.0529 706.463 97.1471 676.115 124.664C645.768 152.18 599.972 180.057 543.747 205.24C487.523 230.423 423.038 251.94 357.359 267.434C291.679 282.928 227.34 291.8 171.391 293.079C115.441 294.358 70.0404 287.994 40.163 274.685C10.2856 261.376 -2.9155 241.634 2.00606 217.624C6.92762 193.614 29.782 166.261 68.065 138.563" stroke="#2E2E2E"/>
+									</g>
+									<defs>
+										<clipPath id="clip0_345_2886">
+											<rect width="718" height="294" fill="white"/>
+										</clipPath>
+									</defs>
 								</svg>
 							</div>
 							<div className="hotel max-w-[252px] absolute 2xl:top-[29%] 2xl:left-0 z-10 xl:top-[30%] xl:left-[2%] lg:top-[34%] lg:left-[4%] md:top-[29%] md:left-0">

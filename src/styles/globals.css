@@ -64,13 +64,14 @@ body.open_nav .main_header .header_logo .white_logo { @apply block }
 
 @keyframes animate-svg-stroke-1 {
   0% {
-    stroke-dashoffset: 1029.6566162109375px;
-    stroke-dasharray: 1029.6566162109375px;
+    opacity: 0;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
   }
-
   100% {
-    stroke-dashoffset: 2059.313232421875px;
-    stroke-dasharray: 1029.6566162109375px;
+    opacity: 1;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 10;
   }
 }
 
