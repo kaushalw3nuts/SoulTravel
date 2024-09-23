@@ -43,11 +43,6 @@ const HomeBanner = () => {
 			} // To
 		);
 
-
-
-
-		
-
 		const hotelImage = document.querySelector('.hotel');
 		const flightImage = document.querySelector('.flight');
 		const localImage = document.querySelector('.local');
